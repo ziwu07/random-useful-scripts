@@ -15,9 +15,9 @@ def unzip(file:str, destination:str):
 
 
 if __name__ == "__main__":
-    origin = os.path.abspath('./prezipped') #input('origin dir :')
-    result = os.path.abspath('./unzipped') #input('result dir :')
-    archive_type = 'zip' #input('archive type :')
+    origin = os.path.abspath(input('origin dir :'))
+    result = os.path.abspath(input('result dir :'))
+    archive_type = input('archive type :')
     zip_files = []
     for root, dirs, files in os.walk(origin):
         for file in fnmatch.filter(files, f'*.{archive_type}'):
